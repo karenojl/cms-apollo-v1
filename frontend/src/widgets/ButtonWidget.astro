@@ -1,0 +1,18 @@
+---
+const { widget } = Astro.props;
+const { label, url, style = 'primary' } = widget;
+
+const styleClass = style === 'primary' ? 'button is-primary' : 'button is-secondary';
+---
+
+<div class="button-widget">
+  <a href={url} class={styleClass}>
+    {label}
+  </a>
+</div>
+
+<style>
+  .button-widget {
+    margin: 1rem 0;
+  }
+</style>
